@@ -1,10 +1,10 @@
 <?php
+require 'vendor/autoload.php'; // include Composer's autoloader
 $disease = $_POST['diseasetype'];
 $location = $_POST['location'];
 $date = $_POST['date'];
 
-$client = new MongoDB\Client(
-    'mongodb+srv://fyp_admin:fyp_pwd@cluster0.mongodb.net/?ssl=true&authSource=admin&serverSelectionTryOnce=false&serverSelectionTimeoutMS=15000"');
+$client = new MongoDB\Client('mongodb+srv://fyp_admin:fyp_pwd@cluster0.mongodb.net/?ssl=true&authSource=admin&serverSelectionTryOnce=false&serverSelectionTimeoutMS=15000"');
 
 $db = $client->test;
 $collection = $db->flu;
@@ -15,7 +15,7 @@ $datainput = array(
 	'date' => $date
 );
 
-$collection->save($datainput);
+$collection->insertOne($datainput);
 
 header('Location: /index.html');
 ?>
