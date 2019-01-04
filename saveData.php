@@ -7,7 +7,7 @@ $date = $_POST['date'];
 $client = new MongoDB\Client('mongodb+srv://fyp_admin:fyp_pwd@cluster0-oov30.mongodb.net/test?retryWrites=true');
 
 $db = $client->test;
-$collection = $db->flu;
+$collection = $db->maurihealth;
 
 $datainput = array(
 	'diseasetype' => $disease,
