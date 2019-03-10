@@ -138,7 +138,27 @@
   box-shadow: 0 0 40px 40px #40e0d0 inset;
 }
 
-
+#animateLogo{
+       padding-top: 60px;
+    }
+    #animateLogo>img{
+    display: none;
+    border-radius: 72px;
+    -webkit-border-radius: 72px;
+    -moz-border-radius: 72px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #f5a623;
+    width: 150;
+    height: 150;
+        }
+    #animateLogo>img:first-child {
+        display: block;
+    }
+    #logoText{
+        float: left;
+        padding: 3.5px;
+    }
 </style>
      
      
@@ -188,7 +208,17 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
+        <!--<img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">-->
+        <div id="animateLogo">
+            <img src="img/4.png" width="150" height="150" />
+            <img src="img/3.png" width="150" height="150"/>
+            <img src="img/2.png" width="150" height="150"/>
+            <img src="img/1.png"  width="150" height="150"/>
+        </div>
+
+        <div id="logoText">
+            <img src="img/iconText2.png" width="200" height="200" />
+        </div>
         <h1 class="text-uppercase mb-0">MauriHealth</h1>
         <hr class="star-light">
         <h2 class="font-weight-light mb-0">User input disease data collection</h2>
@@ -320,6 +350,7 @@
     <script src="js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
+    <script src="/js/logo_animate.js"></script>
     <script src="/js/freelancer.min.js"></script>
     <script src="/js/freelancer.js"></script>
 
